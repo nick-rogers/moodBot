@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Nick's Mood</title>
+    <style>
+        body {
+            margin: 0;
+
+        }
+
+        .main {
+            display: block;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            background: radial-gradient(#cccccc, #999999);
+        }
+
+        .emoji {
+            display: inline-block;
+            width: 50%;
+            height: 50vh;
+            margin-top: 18%;
+        }
+
+        .face {
+        display: block;
+          font-size: 8vw;
+          height: 100%;
+          filter: grayscale(1);
+        }
+
+      .time {
+        position: absolute;
+        display: inline-block;
+        width: 30%;
+        height: 13vh;
+        bottom: 0;
+        margin-left: 10%;
+        font-family: sans-serif;
+        color: white;
+        font-weight: 300;
+        cursor: pointer;
+        font-size: 28px;
+        text-decoration: none;
+      }
+
+      .time:hover {
+        opacity: 0.6;
+      }
+
+      .time span {
+        font-size: 1.3vw;
+      }
+
+      .home {
+        display: inline-block;
+        position: absolute;
+        font-family: sans-serif;
+        color: white;
+        font-weight: 600;
+        font-size: 1.3vw;
+        left: 0;
+        margin-left: 8%;
+        margin-top: 2%;
+      }
+
+      .info {
+        display: block;
+        width: 250px;
+        height: 220px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: left;
+        font-family: sans-serif;
+        color: white;
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 2%;
+      }
+
+      .about {
+        display: inline-block;
+        font-family: sans-serif;
+        color: white;
+        font-weight: 600;
+        font-size: 1.3vw;
+        left: 0;
+        margin-left: 30%;
+        margin-top: 2%;
+        cursor: pointer;
+      }
+
+      .about:hover {
+        opacity: 0.6;
+      }
+      .information {
+        display: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <a class="time" href="https://twitter.com/The_Mood_Bot">12:00 PM<br/><span>03/20/18</span></a>
+        <div class="emoji">
+            <h1 class="face">&#x1F610;</h1>
+        </div>
+      <h3 class="home">Nick's Mood</h3>
+      <div class="info">
+        <h2 class="about" onclick="clickedAbout()">About</h2>
+          <p class="information" id="info-text">
+                Nick's mood is a single-serve<br/>
+                website dedicated to documenting<br/>
+                Nick Rogers' mood through the<br/>
+                use of Nick's mood bot twitter<br/>
+                bot that tracks his mood by<br/>
+                monitoring various factors like<br/>
+                the weather and sports results.
+          </p>
+      </div>
+    </div>
+
+    <script>
+        var visible = false;
+
+        function clickedAbout(){
+            var element = document.getElementById('info-text');
+            if(visible == false){
+                element.style.display="block";
+                console.log('visible');
+                visible = true;
+            }else {
+                console.log("hidden");
+                element.style.display="none";
+                visible = false;
+            }
+        }
+
+    </script>
+  
+  </body>
+</html>
